@@ -8,7 +8,7 @@ const Nav = (props) => {
         <nav>
             <div className="nav-wrapper">
                 <div className="container">
-                    <a href="#!" className="brand-logo">Google Books</a>
+                    <Link to="/" className="brand-logo">Google Books</Link>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
                         <li><Link to="/search">Search</Link></li>
                         <li><Link to="/saved">Saved</Link></li>
