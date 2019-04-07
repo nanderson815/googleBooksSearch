@@ -22,3 +22,7 @@ var BookSchema= new Schema({
         type: String
     }
 });
+
+var Book = mongoose.model("Book", BookSchema);
+
+module.exports = Book;
