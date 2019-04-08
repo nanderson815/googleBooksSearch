@@ -7,8 +7,17 @@ const Search = (props) => {
                 <div className="card">
                     <div className="card-content">
                         <span className="card-title">Book Search</span>
-                        <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+                        <form>
+                            <div className="row">
+                                <div className="input-field col s6">
+                                    <input id="book" type="text" className="validate" onChange={props.change} value={props.val}/>
+                                    <label htmlFor="book">Book</label>
+                                </div>
+                            </div>
+                            <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+                            </button>
+                        </form>
+
                     </div>
                 </div>
             </div>
