@@ -14,12 +14,14 @@ class App extends Component {
 
   searchBooks = query => {
     API.search(query)
-      .then(res => this.setState({ result: res.data }));
+      .then(res => this.setState({ result: res.data.items }))
+      .catch(err => console.log(err));
   }
 
   handleInputChange = event => {
     const value = event.target.value;
     this.setState({ search: value});
+
   }
 
   handleFormSubmit = event => {
@@ -34,7 +36,14 @@ class App extends Component {
           <div>
             <Nav />
             <div className="container">
-              <Route exact path="/(|search)" render={() => <Search click={this.handleFormSubmit} change={this.handleInputChange} val={this.state.search}/>}/>
+
+              <Route exact path="/(|search)" 
+              render={() => <Search 
+              click={this.handleFormSubmit} 
+              change={this.handleInputChange} 
+              val={this.state.search} 
+              data={this.state.result}/>}/>
+
             </div>
           </div>
         </Router>
