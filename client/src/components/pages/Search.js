@@ -12,7 +12,7 @@ const Search = (props) => {
                             <span className="card-title">Book Search</span>
                             <form>
                                 <div className="row">
-                                    <div className="input-field col s6">
+                                    <div className="input-field col s12">
                                         <input id="book" type="text" className="validate" onChange={props.change} value={props.val} />
                                         <label htmlFor="book">Book</label>
                                     </div>
@@ -35,7 +35,8 @@ const Search = (props) => {
                         desc={book.volumeInfo.description}
                         link={book.volumeInfo.infoLink}
                         img={book.volumeInfo.imageLinks.thumbnail}
-                        save={props.save}
+                        action={props.save}
+                        txt="Save Book"
                         author={book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "" } />)}
             </div>
         </div>

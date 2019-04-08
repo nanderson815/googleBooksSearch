@@ -15,7 +15,7 @@ const Card = (props) => {
                     </div>
                     <div className="card-action">
                         <a href={props.link}>More Info</a>
-                        <button className="btn" data-index={props.id} onClick={() => props.save(props.id)}>Save Book</button>
+                        <button className="btn" data-index={props.id} onClick={() => props.action(props.id)}>{props.txt}</button>
                     </div>
                 </div>
             </div>
