@@ -15,6 +15,7 @@ const Card = (props) => {
                     </div>
                     <div className="card-action">
                         <a href={props.link}>More Info</a>
+                        <a href="#!">Save Book</a>
                     </div>
                 </div>
             </div>
