@@ -31,9 +31,11 @@ const Search = (props) => {
                     <Card
                         title={book.volumeInfo.title}
                         key={index}
+                        id={index}
                         desc={book.volumeInfo.description}
                         link={book.volumeInfo.infoLink}
                         img={book.volumeInfo.imageLinks.thumbnail}
+                        save={props.save}
                         author={book.volumeInfo.authors ? book.volumeInfo.authors.join(", ") : "" } />)}
             </div>
         </div>

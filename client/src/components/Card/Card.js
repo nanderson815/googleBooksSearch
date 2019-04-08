@@ -7,7 +7,7 @@ const Card = (props) => {
                 <div className="card-image">
                     <img src={props.img} alt={props.title} />
                 </div>
-                <div class="card-stacked">
+                <div className="card-stacked">
                     <div className="card-content">
                         <span className="card-title">{props.title}</span>
                         <h6>{props.author}</h6>
@@ -15,7 +15,7 @@ const Card = (props) => {
                     </div>
                     <div className="card-action">
                         <a href={props.link}>More Info</a>
-                        <a href="#!">Save Book</a>
+                        <button className="btn" data-index={props.id} onClick={() => props.save(props.id)}>Save Book</button>
                     </div>
                 </div>
             </div>
